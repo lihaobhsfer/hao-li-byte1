@@ -1,70 +1,87 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="favicon.ico">
-    <title>Fusion Byte Tutorial</title>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="favicon.ico">
+  <title>Interactive Data Science Byte 1</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap theme -->
-    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
-    <link href="css/theme.css" rel="stylesheet">
-  </head>
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap theme -->
+  <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/theme.css" rel="stylesheet">
+</head>
 
-  <body role="document">
+<body role="document">
 
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="about">About</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
       </div>
-    </nav>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="about">About</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
 
-    <div class="container theme-showcase" role="main">
+  <div class="container theme-showcase" role="main">
 
-      <!-- Main jumbotron for a primary marketing message or call to action -->
-      <div class="jumbotron">
-	<h1>Data Pipeline Project Fusion Byte Example</h1>
-        <p>This is the Fusion Byte of the Data Pipeline class. This
-        page should explain what question you want to answer and use
-        the visualization tools provided by Google Fusion Table to
-        answer it. </p>
-      </div>
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+     <h1>Hao Li - Interactiva Data Science Fusion Byte 1</h1>
+     <p>haoli2@andrew.cmu.edu</p>
+     <p>This is the Fusion Byte of the Interactive Data Science class. On this page I will explain what question I want to answer and use the visualization tools provided by Google Fusion Table.</p>
+   </div>
+   <h1>Question</h1>
+   <p>Do universities in larger cities tend to have lower percentage of white people?</p>
+   <h1>Data Source</h1>
+   <p>College Scorecard Data: <a href="https://collegescorecard.ed.gov/data/">https://collegescorecard.ed.gov/data/</a></p>
+   <h1>Visualization: Data Map</h1>
+   <p>Color based on percentage of white people.</p>
+   <p>Yellow: 0-30%</p>
+   <p>Red: 30-50%</p>
+   <p>Purple: 50-100%</p>
+   <div id="iframe">
+     <!--<iframe width="1000" height="600" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?q=select+col3+from+18TiFfCHF2WMxWazJFiNkUT5JHDy3Al3hp-fnvjPj&amp;viz=MAP&amp;h=false&amp;lat=38.554729708205095&amp;lng=-95.61982701292754&amp;t=1&amp;z=5&amp;l=col3&amp;y=2&amp;tmplt=2&amp;hml=ONE_COL_LAT_LNG"></iframe>></iframe>-->
+     <iframe width="1000" height="600" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?q=select+col3+from+18TiFfCHF2WMxWazJFiNkUT5JHDy3Al3hp-fnvjPj&amp;viz=MAP&amp;h=false&amp;lat=38.69279396914283&amp;lng=-97.75326997481346&amp;t=1&amp;z=5&amp;l=col3&amp;y=3&amp;tmplt=3&amp;hml=ONE_COL_LAT_LNG"></iframe>
+   </div>
+   <h1>Analysis</h1>
+   <p>According to the featured map:</p>
+   <ol>
+   		<li>Bigger Cities have more colleges and universities. Dots are concentrated at several areas. The heat map can also tell this trend. (I put a picture below, since heat map is harder to publish. Note: this map is generated from the first 1000 data points, thus not complete, but you can still see some heated areas)</li>
+   		<div id="img"><img width="1000" src="https://lihaobhsfer.cn/heat_map_us_college.jpg" alt="Heat Map of US Colleges Location"></div>
+   		<li>Colleges and universities in big cities like Los Angeles, San Fransisco, New York, etc, tend to have lower percentage of white people. The dots are mostly yellow and red, indicating there are less than 50% white people in those universities.</li>
+   </ol>
+   
+   <h1>Conclusion</h1>
+   <p>Based on the maps, we can draw a rough conclusion that universities and colleges in larger cities tend to have lower percentage of white people.</p>
 
-
-<iframe width="500" height="300" scrolling="no" frameborder="no"
-	src="https://www.google.com/fusiontables/embedviz?q=select+col16%3E%3E0+from+1ymz3EtGdi4qKGMl5AxEFXtTlgk3tKi8iCpjTzvM&amp;viz=MAP&amp;h=false&amp;lat=38.071424981566125&amp;lng=-85.15232666015623&amp;t=1&amp;z=9&amp;l=col16%3E%3E0&amp;y=3&amp;tmplt=3&amp;hml=TWO_COL_LAT_LNG"></iframe>
-
-      </div> <!-- /page-header -->
-    </div> <!-- /container -->
+ </div> <!-- /page-header -->
+</div> <!-- /container -->
 
 
     <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/jquery-1.11.3.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/docs.min.js"></script>
-  </body>
-</html>
+      ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script src="js/jquery-1.11.3.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/docs.min.js"></script>
+    </body>
+    </html>
